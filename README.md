@@ -40,3 +40,5 @@ This repository is for educational purposes as part of the Johnson & Johnson Rob
 
 ## Disclaimer
 The robotic designs and simulations provided in this repository are educational approximations. They do not represent actual Johnson & Johnson robotic systems.
+
+# J-J-Robotic-Arm-Design-Optimization
