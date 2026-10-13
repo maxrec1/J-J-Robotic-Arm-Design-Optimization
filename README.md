@@ -15,10 +15,31 @@
 - **Notebook**: `Robotic_Arm_Design_Simulation.ipynb`
   - Simulate design modifications for improved response times and durability.
   - Test factors like efficiency and reinforcement using provided tools.
-- **Results**: [Part 2 Design Optimization Results](./Part_2_Design_Optimization_Results.md)
-  - Summary of the selected design factors, modeled metrics, and optimization heatmap.
 - **Resource**: [Design Optimization Principles](./Design_Optimization_Principles.pdf)
   - Learn the fundamentals of design optimization and real-world applications.
+
+#### Part 2 Results: Design Optimization
+
+The simulation models response time as decreasing with the efficiency factor and durability as increasing with the reinforcement factor:
+
+- `new response time = 0.20 s × (1 − efficiency factor)`
+- `new durability = 75 × (1 + reinforcement factor)`
+
+The notebook evaluates all 10,201 pairs of factors from 0.00 to 1.00 in increments of 0.01. Valid results meet the 0.10-second response-time target and do not exceed the durability limit of 100. The combined score adds percentage response-time reduction and percentage durability gain with equal weighting.
+
+| Metric | Baseline | Optimized |
+| --- | ---: | ---: |
+| Efficiency factor | — | 0.50 (50%) |
+| Reinforcement factor | — | 0.33 (33%) |
+| Response time | 0.20 s | 0.10 s |
+| Durability score | 75.00 | 99.75 |
+| Combined improvement score | — | 0.830 |
+
+The sweep found 1,734 valid combinations. The selected factors reach the response-time target and bring durability close to, but not over, its maximum. In this simplified linear model, a 50% efficiency improvement halves response time, while 33% reinforcement adds 24.75 durability points.
+
+![Heatmap of valid design-factor combinations and the selected optimum](./results/part-2-factor-sweep.png)
+
+These are simulation results, not measured hardware performance. The linear relationships and limits are exercise assumptions; a real design requires engineering review and physical testing.
 
 ---
 
