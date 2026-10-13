@@ -15,6 +15,8 @@
 - **Notebook**: `Robotic_Arm_Design_Simulation.ipynb`
   - Simulate design modifications for improved response times and durability.
   - Test factors like efficiency and reinforcement using provided tools.
+- **Results**: [Part 2 Design Optimization Results](./Part_2_Design_Optimization_Results.md)
+  - Summary of the selected design factors, modeled metrics, and optimization heatmap.
 - **Resource**: [Design Optimization Principles](./Design_Optimization_Principles.pdf)
   - Learn the fundamentals of design optimization and real-world applications.
 
